@@ -1,12 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter,Routes,Route } from "react-router-dom";
+
 import './index.css';
 import App from './App';
+import Bdays from './Days';
+import 'bootstrap/dist/css/bootstrap.rtl.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+    <Routes>
+      <Route path='/' element={<App />} />
+      <Route path='/dates' element={<Bdays />} />
+    </Routes>
+    </BrowserRouter>
+    
   </React.StrictMode>,
   document.getElementById('root')
 );
